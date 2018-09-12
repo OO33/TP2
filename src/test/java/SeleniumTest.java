@@ -45,7 +45,7 @@ public class SeleniumTest {
         driver.quit();
     }
 
-    @Test
+    /*@Test
     public void testEnter() throws InterruptedException {
 
         String expected = "French language - Wikipedia";
@@ -62,6 +62,22 @@ public class SeleniumTest {
 
         //Thread.sleep(1000);
 
+    }*/
+
+    @Test
+
+    public void testEnter() throws InterruptedException {
+
+        String expected = "French language - Wikipedia";
+
+        WebElement barreRecherche = driver.findElement(By.id("lst-ib"));
+        barreRecherche.sendKeys("french");
+        barreRecherche.sendKeys(Keys.ENTER);
+
+        WebElement premierResultat = driver.findElement(By.cssSelector(".rc>.r>a"));
+
+        Assert.assertEquals(expected, premierResultat.getText());
+
     }
 
     @Test
@@ -77,9 +93,7 @@ public class SeleniumTest {
         //WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
         WebElement premierResultat = driver.findElement(By.cssSelector(".rc>.r>a"));
         Assert.assertEquals(expected, premierResultat.getText());
-
-
-
+        
         //Thread.sleep(1000);
 
     }
