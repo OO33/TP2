@@ -17,7 +17,8 @@ public class SeleniumTest {
     @Before
     public void setup()
     {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://google.com");
     }
@@ -43,7 +44,7 @@ public class SeleniumTest {
         Assert.assertEquals(expected, premierResultat.getText());
 
 
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
 
     }
 
@@ -63,7 +64,7 @@ public class SeleniumTest {
 
 
 
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
 
     }
 
