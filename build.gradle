@@ -17,5 +17,5 @@ dependencies {
 }
 
 tasks.withType(Test){
-    SystemProperties 'browser' , System.getProperty('browser')
+    systemProperty 'browser', System.getProperty('browser')
 }
