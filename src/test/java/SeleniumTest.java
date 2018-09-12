@@ -18,7 +18,23 @@ public class SeleniumTest {
     public void setup()
     {
         //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        String browser = System.getProperty("browser");
+        if(browser == null) {
+            driver = new ChromeDriver();
+        }
+        else if(browser.equals("chrome"))
+        {
+            driver = new ChromeDriver();
+        }
+        else if(browser.equals("firefox"))
+        {
+            driver = new FirefoxDriver();
+        }
+        else
+        {
+            driver = new ChromeDriver();
+        }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://google.com");
     }
@@ -47,7 +63,7 @@ public class SeleniumTest {
         //Thread.sleep(1000);
 
     }
-/*
+
     @Test
     public void testClick() throws InterruptedException {
         String expected = "République française - France — Wikipédia";
@@ -66,6 +82,5 @@ public class SeleniumTest {
 
         //Thread.sleep(1000);
 
-    }*/
-
+    }
 }
