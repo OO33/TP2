@@ -66,10 +66,10 @@ public class SeleniumTest {
 
     @Test
     public void testClick() throws InterruptedException {
-        String expected = "République française - France — Wikipédia";
+        String expected = "French language - Wikipedia";
 
         WebElement barreRecherche = driver.findElement(By.id("lst-ib"));
-        barreRecherche.sendKeys("france");
+        barreRecherche.sendKeys("french");
 
         WebElement buttonRecheche = driver.findElement(By.className("lsb"));
         buttonRecheche.click();
