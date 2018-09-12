@@ -38,7 +38,8 @@ public class SeleniumTest {
         //barreRecherche.sendKeys("canelé" + Keys.ENTER);
         barreRecherche.sendKeys(Keys.ENTER);
 
-        WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
+        //WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
+        WebElement premierResultat = driver.findElement(By.cssSelector(".rc>.r>a"));
         Assert.assertEquals(expected, premierResultat.getText());
 
 
@@ -56,7 +57,8 @@ public class SeleniumTest {
         WebElement buttonRecheche = driver.findElement(By.className("lsb"));
         buttonRecheche.click();
 
-        WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
+        //WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
+        WebElement premierResultat = driver.findElement(By.cssSelector(".rc>.r>a"));
         Assert.assertEquals(expected, premierResultat.getText());
 
 
