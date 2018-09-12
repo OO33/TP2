@@ -47,7 +47,7 @@ public class SeleniumTest {
         //Thread.sleep(1000);
 
     }
-
+/*
     @Test
     public void testClick() throws InterruptedException {
         String expected = "République française - France — Wikipédia";
@@ -66,6 +66,6 @@ public class SeleniumTest {
 
         //Thread.sleep(1000);
 
-    }
+    }*/
 
 }
