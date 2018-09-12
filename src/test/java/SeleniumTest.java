@@ -65,7 +65,6 @@ public class SeleniumTest {
     }*/
 
     @Test
-
     public void testEnter() throws InterruptedException {
 
         String expected = "French language - Wikipedia";
@@ -93,7 +92,7 @@ public class SeleniumTest {
         //WebElement premierResultat = driver.findElement((By.xpath("//*[@id=\"rso\"]/div[2]/div/div/div/div/h3/a")));
         WebElement premierResultat = driver.findElement(By.cssSelector(".rc>.r>a"));
         Assert.assertEquals(expected, premierResultat.getText());
-        
+
         //Thread.sleep(1000);
 
     }
